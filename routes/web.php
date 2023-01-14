@@ -20,9 +20,15 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
 Route::get('/', [App\Http\Controllers\FrontendController::class, 'home'])->name('frontend-home');
 Route::get('/service', [App\Http\Controllers\FrontendController::class, 'service'])->name('frontend-service');
 Route::get('/news', [App\Http\Controllers\FrontendController::class, 'news'])->name('frontend-news');
 Route::get('/donate', [App\Http\Controllers\FrontendController::class, 'donate'])->name('frontend-donate');
 Route::get('/contact', [App\Http\Controllers\FrontendController::class, 'contact'])->name('frontend-contact');
+Route::group(['middleware' => ['auth']], function(){
+    Route::resource('news', App\Http\Controllers\NewsController::class);
+
+});
+
 Route::get('/dasboard',[App\Http\Controllers\DashboardController::class, 'index'])->name('dashboard.index');
