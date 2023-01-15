@@ -1,8 +1,55 @@
 @extends('layouts.master') 
 @section('content') 
 
-   
+
+<link rel="stylesheet" href="{{asset('css/bootstrap.min.css')}}">
+
+  <script src="{{asset('js/bootstrap.min.js')}}"></script>
+   <style>
+      input[type="time"]::-webkit-calendar-picker-indicator {
+    background: none;
+}
+.nobg{
+   background: transparent;
+    color: #ffffff;
+    text-align: center !important;
+}
+
+   </style>
+
+
             <div class="page_content_wrap scheme_default">
+               <div class="d">
+               <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                  <!-- Indicators -->
+                  <ol class="carousel-indicators">
+                  @foreach($sliders as $key => $slide)
+                     <li data-target="#myCarousel" data-slide-to="{{$key++}}" {{$slide->id==4 ? 'class="active"' : ''}} ></li>
+                  @endforeach
+                  </ol>
+                  
+
+                  <!-- Wrapper for slides -->
+                  <div class="carousel-inner">
+                  @foreach($sliders as $key => $slide)
+                     <div class="item {{$slide->id==4 ? 'active' : ''}}">
+                        <img src="{{ asset('uploads/slider/'.$slide->image) }}" alt="Los Angeles">
+                     </div>
+                  @endforeach
+
+                  </div>
+
+                  <!-- Left and right controls -->
+                  <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                     <span class="glyphicon glyphicon-chevron-left"></span>
+                     <span class="sr-only">Previous</span>
+                  </a>
+                  <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                     <span class="glyphicon glyphicon-chevron-right"></span>
+                     <span class="sr-only">Next</span>
+                  </a>
+                  </div>
+               </div>
                <div class="content_wrap">
                   <div class="content">
                      <article id="post-346" class="post_item_single post_type_page post-346 page type-page status-publish hentry">
@@ -151,27 +198,27 @@
                                           </tr>
                                           <tr >
                                              <td style="text-align: left;  padding-left: 10px; text-align:center;">Fajr</td>
-                                             <td style="text-align: left;  padding-left: 10px;text-align:center;">6:03 AM</td>
+                                             <td style="text-align: left;  padding-left: 10px;text-align:center;"><input class="nobg" type="time" value="{{$prayer['data']['timings']['Fajr'] ?? ''}}"></td>
                                           </tr>
                                           <tr >
                                              <td style="text-align: left;  padding-left: 10px;text-align:center;">Sunrise</td>
-                                             <td style="text-align: left;  padding-left: 10px; text-align:center;" >8:14 AM</td>
+                                             <td style="text-align: left;  padding-left: 10px;text-align:center;"><input class="nobg" type="time" value="{{$prayer['data']['timings']['Sunrise'] ?? ''}}"></td>
                                           </tr>
                                           <tr >
                                              <td style="text-align: left;  padding-left: 10px;text-align:center;">Dhuhr</td>
-                                             <td style="text-align: left;  padding-left: 10px;text-align:center;">12:08 PM</td>
+                                             <td style="text-align: left;  padding-left: 10px;text-align:center;"><input class="nobg" type="time" value="{{$prayer['data']['timings']['Dhuhr'] ?? ''}}"></td>
                                           </tr>
                                           <tr >
                                              <td style="text-align: left;  padding-left: 10px;text-align:center;">Asr</td>
-                                             <td style="text-align: left;  padding-left: 10px;text-align:center;">1:46 PM</td>
+                                             <td style="text-align: left;  padding-left: 10px;text-align:center;"><input class="nobg" type="time" value="{{$prayer['data']['timings']['Asr'] ?? ''}}"></td>
                                           </tr>
                                           <tr >
                                              <td style="text-align: left;  padding-left: 10px;text-align:center;">Magrib</td>
-                                             <td style="text-align: left;  padding-left: 10px;text-align:center;">4:03 PM</td>
+                                             <td style="text-align: left;  padding-left: 10px;text-align:center;"><input class="nobg" type="time" value="{{$prayer['data']['timings']['Maghrib'] ?? ''}}"></td>
                                           </tr>
                                           <tr >
                                              <td style="text-align: left;  padding-left: 10px;text-align:center;">Isha</td>
-                                             <td style="text-align: left;  padding-left: 10px;text-align:center;">5:33 PM</td>
+                                             <td style="text-align: left;  padding-left: 10px;text-align:center;"><input class="nobg" type="time" value="{{$prayer['data']['timings']['Isha'] ?? ''}}"></td>
                                           </tr>
                                        </table>
                                        <div class="wpb_text_column wpb_content_element  boederpadding" >
@@ -184,8 +231,8 @@
                               <div class="wpb_column vc_column_container vc_col-sm-6 vc_col-has-fill sc_layouts_column_icons_position_left">
                                  <div class="vc_column-inner vc_custom_1631720132063">
                                     <div class="wpb_wrapper">
-                                       <h2 style="font-size: 26px;color: #ffffff;text-align: center" class="vc_custom_heading" >Today’s Jamaat Times</h2>
-                                       <h4 style="font-size: 16px;color: #ffffff;text-align: center" class="vc_custom_heading" >Masjid opens at Jamaat times only</h4>
+                                       <h2 style="font-size: 26px;color: #ffffff;text-align: center" class="vc_custom_heading" >{{$jamat->title ?? ''}}</h2>
+                                       <h4 style="font-size: 16px;color: #ffffff;text-align: center" class="vc_custom_heading" >{{$jamat->sub_title ?? ''}}</h4>
                                        <div class="vc_empty_space"   style="height: 2em"><span class="vc_empty_space_inner"></span></div>
                                        <div class="sc_layouts sc_layouts_default sc_layouts_979 boederpadding">
                                           <div class="vc_row wpb_row vc_row-fluid">
@@ -211,33 +258,33 @@
                                                                <tbody>
                                                                   <tr>
                                                                      <td style="text-align: center;"><b>Fajr</b></td>
-                                                                     <td style="text-align: center;">---</td>
-                                                                     <td style="text-align: center;">---</td>
+                                                                     <td style="text-align: center;"><input class="nobg" type="time" value="{{$jamat->Fajr_weekdays ?? ''}}"></td>
+                                                                     <td style="text-align: center;"><input class="nobg" type="time" value="{{$jamat->Fajr_weekends ?? ''}}"></td>
                                                                   </tr>
                                                                   <tr>
                                                                      <td style="text-align: center;"><b>Dhuhr</b></td>
-                                                                     <td style="text-align: center;">12:45 PM</td>
-                                                                     <td style="text-align: center;">12:45 PM</td>
+                                                                     <td style="text-align: center;"><input class="nobg" type="time" value="{{$jamat->Dhuhr_weekdays ?? ''}}"></td>
+                                                                     <td style="text-align: center;"><input class="nobg" type="time" value="{{$jamat->Dhuhr_weekends ?? ''}}"></td>
                                                                   </tr>
                                                                   <tr>
                                                                      <td style="text-align: center;"><b>Asr</b></td>
-                                                                     <td style="text-align: center;">02:45 PM</td>
-                                                                     <td style="text-align: center;">02:45 PM</td>
+                                                                     <td style="text-align: center;"><input class="nobg" type="time" value="{{$jamat->Asr_weekdays ?? ''}}"></td>
+                                                                     <td style="text-align: center;"><input class="nobg" type="time" value="{{$jamat->Asr_weekends ?? ''}}"></td>
                                                                   </tr>
                                                                   <tr>
                                                                      <td style="text-align: center;"><b>Magrib</b></td>
-                                                                     <td style="text-align: center;">Sunset</td>
-                                                                     <td style="text-align: center;">Sunset</td>
+                                                                     <td style="text-align: center;"><b>{{$jamat->Magrib_weekdays ?? ''}}</b></td>
+                                                                     <td style="text-align: center;"><b>{{$jamat->Magrib_weekends ?? ''}}</b></td>
                                                                   </tr>
                                                                   <tr>
                                                                      <td style="text-align: center;"><b>Isha</b></td>
-                                                                     <td style="text-align: center;">07:45 PM</td>
-                                                                     <td style="text-align: center;">07:45 PM</td>
+                                                                     <td style="text-align: center;"><input class="nobg" type="time" value="{{$jamat->Isha_weekdays ?? ''}}"></td>
+                                                                     <td style="text-align: center;"><input class="nobg" type="time" value="{{$jamat->Isha_weekends ?? ''}}"></td>
                                                                   </tr>
                                                                   <tr>
                                                                      <td style="text-align: center;"><b>Jummah</b></td>
-                                                                     <td style="text-align: center;"><b>Friday</b></td>
-                                                                     <td style="text-align: center;"><b>12:45 PM</b></td>
+                                                                     <td style="text-align: center;"><b>{{$jamat->Jummah_weekdays ?? ''}}</b></td>
+                                                                     <td style="text-align: center;"><input class="nobg" type="time" value="{{$jamat->Jummah_weekends ?? ''}}"></td>
                                                                   </tr>
                                                                </tbody>
                                                             </table>

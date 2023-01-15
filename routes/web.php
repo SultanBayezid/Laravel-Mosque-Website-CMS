@@ -26,8 +26,13 @@ Route::get('/service', [App\Http\Controllers\FrontendController::class, 'service
 Route::get('/news', [App\Http\Controllers\FrontendController::class, 'news'])->name('frontend-news');
 Route::get('/donate', [App\Http\Controllers\FrontendController::class, 'donate'])->name('frontend-donate');
 Route::get('/contact', [App\Http\Controllers\FrontendController::class, 'contact'])->name('frontend-contact');
-Route::group(['middleware' => ['auth']], function(){
+
+Route::group(['prefix' => 'admin', 'middleware' => ['auth']], function(){
     Route::resource('news', App\Http\Controllers\NewsController::class);
+    Route::resource('payertime', App\Http\Controllers\PrayerTimeController::class);
+    Route::resource('jamattime', App\Http\Controllers\JamatTimeController::class);
+    Route::resource('announcement', App\Http\Controllers\AnnouncementController::class);
+    Route::resource('slider', App\Http\Controllers\SliderController::class);
 
 });
 

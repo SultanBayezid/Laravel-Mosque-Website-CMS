@@ -74,9 +74,10 @@ class NewsController extends Controller
      * @param  \App\Models\News  $news
      * @return \Illuminate\Http\Response
      */
-    public function edit(News $news)
+    public function edit($id)
     {
-        //
+       $news = News::find($id);
+       return view('backend.news.edit', compact('news'));
     }
 
     /**
@@ -86,9 +87,25 @@ class NewsController extends Controller
      * @param  \App\Models\News  $news
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, News $news)
+    public function update(Request $request, $id)
     {
-        //
+        $this->validate($request,[
+            'title' => 'required',
+            'description' => 'required'
+            ]);
+        $news = News::find($id);
+        $news->title = $request->title;
+        $news->description = $request->description;
+        $news->date = now();
+        if ($request->hasFile('image')){
+            $image = $request->file('image');
+            $file_name = "news_".time().'.'.$image->getClientOriginalExtension();
+            $image->move(base_path('public/uploads/news/'),$file_name);
+            $news->image = $file_name;
+         }
+         $news->save();
+         return redirect()->route('news.index')->with('success','News updated successfully!');
+
     }
 
     /**
@@ -97,8 +114,10 @@ class NewsController extends Controller
      * @param  \App\Models\News  $news
      * @return \Illuminate\Http\Response
      */
-    public function destroy(News $news)
+    public function destroy($id)
     {
-        //
+        $news = News::find($id);
+        $news->delete();
+        return redirect()->route('news.index')->with('success','News deleted successfully!');
     }
 }

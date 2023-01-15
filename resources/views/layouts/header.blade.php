@@ -236,13 +236,12 @@
                                                         <div id="br-sidewidth" class="br-sitewidth">
                                                             <div id="br-marquee" class="br_marquee">
                                                                 <ul id="br-ul" class="br_ul">
+                                                                    @foreach(App\Models\Announcement::all() as $anu)
                                                                     <li>
-                                                                    <p class="MsoNormal" style="margin: 0cm; font-family: 'Times New Roman', serif; caret-color: #000000; color: #000000;"><b><span style="font-size: 10pt; font-family: Calibri, sans-serif; color: #ffffff; padding-top: 5px;"> FRIDAY JUMMAH AT 12:45 PM PLEASE AVOID PARKING THE CARS ELMER STREET IN FRONT OF MASJID </span></b></p>
-                                                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                                                    <p class="MsoNormal" style="margin: 0cm; font-family: 'Times New Roman', serif; caret-color: #000000; color: #000000;"><b><span style="font-size: 10pt; font-family: Calibri, sans-serif; color: #ffffff; padding-top: 5px;"> FRIDAY JUMMAH AT 12:45 PM PLEASE AVOID PARKING THE CARS ELMER STREET IN FRONT OF MASJID </span></b></p>
-                                                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                                                    <p class="MsoNormal" style="margin: 0cm; font-family: 'Times New Roman', serif; caret-color: #000000; color: #000000;"><b><span style="font-size: 10pt; font-family: Calibri, sans-serif; color: #ffffff; padding-top: 5px;"> FRIDAY JUMMAH AT 12:45 PM PLEASE AVOID PARKING THE CARS ELMER STREET IN FRONT OF MASJID </span></b></p>
+                                                                    <p class="MsoNormal" style="margin: 0cm; font-family: 'Times New Roman', serif; caret-color: #000000; color: #000000;"><b><span style="font-size: 10pt; font-family: Calibri, sans-serif; color: #ffffff; padding-top: 5px;"> {{$anu->announcement ?? ''}} </span></b></p>
                                                                     </li>
+                                                                    @endforeach
+                                                                    
                                                                 </ul>
                                                             </div>
                                                         </div>
