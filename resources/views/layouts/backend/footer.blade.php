@@ -4,7 +4,7 @@
             <!-- ============================================================== -->
             <!-- footer -->
             <!-- ============================================================== -->
-            <footer class="footer"> © 2021 Adminwrap by <a href="https://www.wrappixel.com/">wrappixel.com</a> </footer>
+            <footer class="footer"> © 2023 MUSLIM COMMUNITY ASSOCIATION Registered Charity No: REDACTED ALL RIGHTS RESERVED.</footer>
             <!-- ============================================================== -->
             <!-- End footer -->
             <!-- ============================================================== -->

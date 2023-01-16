@@ -31,8 +31,10 @@
                         <div class="card">
                             <div class="card-body">
                               
-<form method="post" class="ajax-submit" autocomplete="off   "
+                            <form method="post" class="ajax-submit" autocomplete="off" action="{{route('prayer-time.update', $jamat->id)}}"
     enctype="multipart/form-data">
+    @method('PUT')
+				{{ csrf_field() }}
 
             <div class="modal-body">
             <div class="form-group row">
@@ -40,15 +42,15 @@
             <label for="appointment_interval" class="col-sm-3 col-form-label">{{ ('Title') }}</label>
                   <div class="col-sm-8">
                 
-                   <input type="text" name="title" class="form-control" placeholder="" value="">
+                   <input type="text" name="title" class="form-control" placeholder="" value="{{$jamat->title}}">
                   </div>
             </div>
             <div class="form-group row">
            
-           <label for="appointment_interval" class="col-sm-3 col-form-label">{{ ('Sun Title') }}</label>
+           <label for="appointment_interval" class="col-sm-3 col-form-label">{{ ('SuB Title') }}</label>
                  <div class="col-sm-8">
                
-                  <input type="text" name="sub_title" class="form-control" placeholder="" value="">
+                  <input type="text" name="sub_title" class="form-control" placeholder="" value="{{$jamat->sub_title}}">
                  </div>
            </div>
 

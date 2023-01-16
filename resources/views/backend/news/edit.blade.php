@@ -50,7 +50,8 @@
                                     <div class="form-group">
                                         <label class="col-md-12">Descriptions</label>
                                         <div class="col-md-12">
-                                            <textarea rows="5" name="description" class="form-control form-control-line">{{$news->description ?? ''}}</textarea>
+                                        <textarea class="ckeditor form-control form-control-line" name="description">{{$news->description ?? ''}}</textarea>
+                            
                                         </div>
                                     </div>
 
@@ -68,5 +69,10 @@
                 <!-- End PAge Content -->
                 <!-- ============================================================== -->
             </div>
-           
+            <script src="//cdn.ckeditor.com/4.14.0/standard/ckeditor.js"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+       $('.ckeditor').ckeditor();
+    });
+</script>
         @endsection

@@ -4,17 +4,9 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <!-- Tell the browser to be responsive to screen width -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="keywords"
-        content="wrappixel, admin dashboard, html css dashboard, web dashboard, bootstrap 5 admin, bootstrap 5, css3 dashboard, bootstrap 5 dashboard, AdminWrap lite admin bootstrap 5 dashboard, frontend, responsive bootstrap 5 admin template, AdminWrap lite design, AdminWrap lite dashboard bootstrap 5 dashboard template">
-    <meta name="description"
-        content="AdminWrap Lite is powerful and clean admin dashboard template, inpired from Bootstrap Framework">
-    <meta name="robots" content="noindex,nofollow">
     <title>Al-Noor Islamic Centre</title>
-    <link rel="canonical" href="https://www.wrappixel.com/templates/adminwrap-lite/" />
     <!-- Favicon icon -->
-    <link rel="icon" type="image/png" sizes="16x16" href="{{asset('backend/assets/images/favicon.png')}}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{asset('wp-content/uploads/2022/02/the-prophets-mosque.png')}}">
     <!-- Bootstrap Core CSS -->
     <link href="{{asset('backend/assets/node_modules/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
     <link href="{{asset('backend/assets/node_modules/perfect-scrollbar/css/perfect-scrollbar.css')}}" rel="stylesheet">
@@ -60,20 +52,20 @@
                 <!-- Logo -->
                 <!-- ============================================================== -->
                 <div class="navbar-header">
-                    <a class="navbar-brand" href="index.html">
+                    <a class="navbar-brand" href="#">
                         <!-- Logo icon --><b>
                             <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
                             <!-- Dark Logo icon -->
-                            <img src="{{asset('backend/assets/images/logo-icon.png')}}" alt="homepage" class="dark-logo" />
+                            <img src="{{asset('backend/assets/images/logo-icon.png')}}" alt="homepage" width="40" class="dark-logo" />
                             <!-- Light Logo icon -->
-                            <img src="{{asset('backend/assets/images/logo-light-icon.png')}}" alt="homepage" class="light-logo" />
+                            <img src="{{asset('backend/assets/images/logo-light-icon.png')}}" alt="homepage" width="40" class="light-logo" />
                         </b>
                         <!--End Logo icon -->
                         <!-- Logo text --><span>
                             <!-- dark Logo text -->
-                            <img src="{{asset('backend/assets/images/logo-text.png')}}" alt="homepage" class="dark-logo" />
+                            <img src="{{asset('backend/assets/images/logo-text.png')}}" alt="homepage" width="180" class="dark-logo" />
                             <!-- Light Logo text -->
-                            <img src="{{asset('backend/assets/images/logo-light-text.png')}}" class="light-logo" alt="homepage" /></span>
+                            <img src="{{asset('backend/assets/images/logo-text.png')}}" width="120" class="light-logo" alt="homepage" /></span>
                     </a>
                 </div>
                 <!-- ============================================================== -->
@@ -90,11 +82,9 @@
                         <!-- Search -->
                         <!-- ============================================================== -->
                         <li class="nav-item hidden-xs-down search-box"> <a
-                                class="nav-link hidden-sm-down waves-effect waves-dark" href="javascript:void(0)"><i
-                                    class="fa fa-search"></i></a>
-                            <form class="app-search">
-                                <input type="text" class="form-control" placeholder="Search & enter"> <a
-                                    class="srh-btn"><i class="fa fa-times"></i></a></form>
+                                class="nav-link" target="_blank" href="/"><i
+                                    class="fa fa-globe"></i>  <span style="font-size:15px;">Visit Website</span> </a>
+                      
                         </li>
                     </ul>
                     <!-- ============================================================== -->
@@ -105,9 +95,9 @@
                         <!-- Profile -->
                         <!-- ============================================================== -->
                         <li class="nav-item dropdown u-pro">
-                            <a class="nav-link dropdown-toggle waves-effect waves-dark profile-pic" href="#"
-                                id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img
-                                    src="{{asset('backend/assets/images/users/1.jpg')}}" alt="user" class="" /> <span
+                            <a class="nav-link waves-dark profile-pic" href="{{route('profile-list')}}"
+                               ><img
+                                    src="{{ asset('uploads/profile/'.Auth::user()->image) }}" alt="user" class="" /> <span
                                     class="hidden-md-down">{{Auth::user()->name}}&nbsp;</span> </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown"></ul>
                         </li>

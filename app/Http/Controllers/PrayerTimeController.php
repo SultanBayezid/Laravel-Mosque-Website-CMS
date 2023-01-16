@@ -32,13 +32,22 @@ class PrayerTimeController extends Controller
 
        $resp = curl_exec($curl);
        curl_close($curl);
-
-       //Prrayer Time API  Ends
-
-
-
        $data['prayer'] = json_decode($resp, true);
-       return view('backend.prayertime.index', $data);
+       //Prrayer Time API  Ends
+       $jamat = PrayerTime::orderBy('created_at', 'desc')->first();
+       if($jamat==NULL){
+           $jamat = new PrayerTime();
+           $jamat->title = 'N/A';
+           $jamat->sub_title = 'N/A';
+           $jamat->save();
+           $data['jamat'] = PrayerTime::orderBy('created_at', 'desc')->first();
+           return view('backend.prayertime.index', $data);
+
+       }else{
+           $data['jamat'] = PrayerTime::orderBy('created_at', 'desc')->first();
+           return view('backend.prayertime.index', $data);
+
+       }
 
 
     }
@@ -61,7 +70,11 @@ class PrayerTimeController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $ptime = PrayerTime::find($id);
+        $ptime->title = $request->title;
+        $ptime->sub_title = $request->sub_title;
+        $ptime->save();
+        return redirect()->route('prayer-time.index')->with('success','Prayer Times Updated successfully!');
     }
 
     /**
@@ -93,9 +106,13 @@ class PrayerTimeController extends Controller
      * @param  \App\Models\PrayerTime  $prayerTime
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, PrayerTime $prayerTime)
+    public function update(Request $request, $id)
     {
-        //
+        $ptime = PrayerTime::find($id);
+        $ptime->title = $request->title;
+        $ptime->sub_title = $request->sub_title;
+        $ptime->save();
+        return redirect()->route('prayer-time.index')->with('success','Prayer Times Updated successfully!');
     }
 
     /**

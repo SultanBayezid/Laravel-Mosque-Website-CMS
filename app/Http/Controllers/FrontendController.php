@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Models\JamatTime;
+use App\Models\News;
 use App\Models\Slider;
 use Carbon\Carbon;
 
@@ -42,7 +43,12 @@ class FrontendController extends Controller
     }
 
     public function news(){
-        return view('frontend.news.index');
+        $news = News::all();
+        return view('frontend.news.index', compact('news'));
+    }
+    public function newsShow($id){
+        $news = News::find($id);
+        return view('frontend.news.show', compact('news'));
     }
 
     public function donate(){

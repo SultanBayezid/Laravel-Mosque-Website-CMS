@@ -1,3 +1,4 @@
+@inject('carbon', 'Carbon\Carbon')
 @extends('layouts.master') 
 @section('content') 
 <style >
@@ -24,18 +25,21 @@
                             <div class="page_content_wrap scheme_default">
                <div class="content">
                   <div class="chess_wrap posts_container">
-                     <article id="post-1487" 
+                     @foreach($news as $key => $new)
+                     <article id="post-{{$key + 1}}" 
                         class="post_item post_layout_chess post_layout_chess_1 post_format_standard post-1487 post type-post status-publish format-standard has-post-thumbnail hentry category-news-events"	>
                         <div class="post_featured with_thumb hover_icon alhambra-full-height post_featured_bg alhambra_inline_505113749">
                            <div class="mask"></div>
-                           <div class="icons" style="background-image: url('https://www.example.com/wp-content/uploads/2021/05/media-2021-05-06-at-8.55.29-PM-1051x658.jpeg);"><a href="../gmca-provides-meals-to-homeless%ef%bf%bc/index.html" aria-hidden="true" class="icon-eye-empty"></a></div>
+                           <div class="icons" style="background-image: url({{ asset('uploads/news/'.$new->image) }})"><a href="{{route('frontend-news-show', $new->id)}}" aria-hidden="true" class="icon-eye-empty"></a></div>
                         </div>
                         <div class="post_inner">
                            <div class="post_inner_content">
                               <div class="post_header entry-header">
-                                 <h3 class="post_title entry-title"><a href="../gmca-provides-meals-to-homeless%ef%bf%bc/index.html" rel="bookmark">MCA provides meals to homeless￼</a></h3>
-                                 <div class="post_meta">						<span class="post_meta_item post_categories"><a href="../category/news-events/index.html" rel="category tag">News &amp; Events</a></span>
-                                    <span class="post_meta_item post_date"><a href="../gmca-provides-meals-to-homeless%ef%bf%bc/index.html">12 May 2022</a></span>
+                                 <h3 class="post_title entry-title"><a href="{{route('frontend-news-show', $new->id)}}" rel="bookmark">{{$new->title ?? ''}}</a></h3>
+                                 <div class="post_meta">						<span class="post_meta_item post_categories"><a rel="category tag">News &amp; Events</a></span>
+                                    <span class="post_meta_item post_date"><a href="{{route('frontend-news-show', $new->id)}}">{{ $carbon::parse($new->created_at)->format('d M Y') }}</a></span>
+                                 
+                                  
                                     <a href="../gmca-provides-meals-to-homeless%ef%bf%bc/index.html#respond" class="post_meta_item post_counters_item post_counters_comments trx_addons_icon-comment"><span class="post_counters_number">0</span><span class="post_counters_label">Comments</span></a> 
                                  </div>
                                  <!-- .post_meta -->
@@ -43,72 +47,18 @@
                               <!-- .entry-header -->
                               <div class="post_content entry-content">
                                  <div class="post_content_inner">
-                                    <p>Muslim Community Association (MCA) members has provided meals to vulnerable members of the local community who are affected by poverty and homelessness in collaboration with Springfield Passage. Springfield Passage is run by Springfield and District Poverty Concern Group which was established in 2001 to support the vulnerable members of&hellip;</p>
+                                    <p>{{ Str::limit($new->description, 260) }}</p>
                                  </div>
-                                 <p><a class="more-link" href="../gmca-provides-meals-to-homeless%ef%bf%bc/index.html">Read more</a></p>
+                                 <p><a class="more-link" href="{{route('frontend-news-show', $new->id)}}">Read more</a></p>
                               </div>
                               <!-- .entry-content -->
                            </div>
                         </div>
                         <!-- .post_inner -->
                      </article>
+                        @endforeach
 
-                     <article id="post-1487" 
-                        class="post_item post_layout_chess post_layout_chess_1 post_format_standard post-1487 post type-post status-publish format-standard has-post-thumbnail hentry category-news-events"	>
-                        <div class="post_featured with_thumb hover_icon alhambra-full-height post_featured_bg alhambra_inline_505113749">
-                           <div class="mask"></div>
-                           <div class="icons" style="background-image: url('https://www.example.com/wp-content/uploads/2021/05/media-2021-05-06-at-8.55.29-PM-1051x658.jpeg);"><a href="../gmca-provides-meals-to-homeless%ef%bf%bc/index.html" aria-hidden="true" class="icon-eye-empty"></a></div>
-                        </div>
-                        <div class="post_inner">
-                           <div class="post_inner_content">
-                              <div class="post_header entry-header">
-                                 <h3 class="post_title entry-title"><a href="../gmca-provides-meals-to-homeless%ef%bf%bc/index.html" rel="bookmark">MCA provides meals to homeless￼</a></h3>
-                                 <div class="post_meta">						<span class="post_meta_item post_categories"><a href="../category/news-events/index.html" rel="category tag">News &amp; Events</a></span>
-                                    <span class="post_meta_item post_date"><a href="../gmca-provides-meals-to-homeless%ef%bf%bc/index.html">12 May 2022</a></span>
-                                    <a href="../gmca-provides-meals-to-homeless%ef%bf%bc/index.html#respond" class="post_meta_item post_counters_item post_counters_comments trx_addons_icon-comment"><span class="post_counters_number">0</span><span class="post_counters_label">Comments</span></a> 
-                                 </div>
-                                 <!-- .post_meta -->
-                              </div>
-                              <!-- .entry-header -->
-                              <div class="post_content entry-content">
-                                 <div class="post_content_inner">
-                                    <p>Muslim Community Association (MCA) members has provided meals to vulnerable members of the local community who are affected by poverty and homelessness in collaboration with Springfield Passage. Springfield Passage is run by Springfield and District Poverty Concern Group which was established in 2001 to support the vulnerable members of&hellip;</p>
-                                 </div>
-                                 <p><a class="more-link" href="../gmca-provides-meals-to-homeless%ef%bf%bc/index.html">Read more</a></p>
-                              </div>
-                              <!-- .entry-content -->
-                           </div>
-                        </div>
-                        <!-- .post_inner -->
-                     </article>
-                     <article id="post-1487" 
-                        class="post_item post_layout_chess post_layout_chess_1 post_format_standard post-1487 post type-post status-publish format-standard has-post-thumbnail hentry category-news-events"	>
-                        <div class="post_featured with_thumb hover_icon alhambra-full-height post_featured_bg alhambra_inline_505113749">
-                           <div class="mask"></div>
-                           <div class="icons" style="background-image: url('https://www.example.com/wp-content/uploads/2021/05/media-2021-05-06-at-8.55.29-PM-1051x658.jpeg);"><a href="../gmca-provides-meals-to-homeless%ef%bf%bc/index.html" aria-hidden="true" class="icon-eye-empty"></a></div>
-                        </div>
-                        <div class="post_inner">
-                           <div class="post_inner_content">
-                              <div class="post_header entry-header">
-                                 <h3 class="post_title entry-title"><a href="../gmca-provides-meals-to-homeless%ef%bf%bc/index.html" rel="bookmark">MCA provides meals to homeless￼</a></h3>
-                                 <div class="post_meta">						<span class="post_meta_item post_categories"><a href="../category/news-events/index.html" rel="category tag">News &amp; Events</a></span>
-                                    <span class="post_meta_item post_date"><a href="../gmca-provides-meals-to-homeless%ef%bf%bc/index.html">12 May 2022</a></span>
-                                    <a href="../gmca-provides-meals-to-homeless%ef%bf%bc/index.html#respond" class="post_meta_item post_counters_item post_counters_comments trx_addons_icon-comment"><span class="post_counters_number">0</span><span class="post_counters_label">Comments</span></a> 
-                                 </div>
-                                 <!-- .post_meta -->
-                              </div>
-                              <!-- .entry-header -->
-                              <div class="post_content entry-content">
-                                 <div class="post_content_inner">
-                                    <p>Muslim Community Association (MCA) members has provided meals to vulnerable members of the local community who are affected by poverty and homelessness in collaboration with Springfield Passage. Springfield Passage is run by Springfield and District Poverty Concern Group which was established in 2001 to support the vulnerable members of&hellip;</p>
-                                 </div>
-                                 <p><a class="more-link" href="../gmca-provides-meals-to-homeless%ef%bf%bc/index.html">Read more</a></p>
-                              </div>
-                              <!-- .entry-content -->
-                           </div>
-                        </div>
-                        <!-- .post_inner -->
-                     </article>
+                        <div class="d" style="padding-top:150px;"></div>
                
                   </div>
       
