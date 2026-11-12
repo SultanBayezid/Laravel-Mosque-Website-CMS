@@ -4,7 +4,7 @@
             <!-- ============================================================== -->
             <!-- footer -->
             <!-- ============================================================== -->
-            <footer class="footer"> © 2023 MUSLIM COMMUNITY ASSOCIATION Registered Charity No: REDACTED ALL RIGHTS RESERVED.</footer>
+            <footer class="footer"> © {{ date('Y') }} {{ config('app.name', 'Mosque Website CMS') }}. ALL RIGHTS RESERVED.</footer>
             <!-- ============================================================== -->
             <!-- End footer -->
             <!-- ============================================================== -->

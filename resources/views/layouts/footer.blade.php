@@ -32,7 +32,7 @@
                                                       <h5 class="widget_title">GRANTHAM ISLAMIC CENTRE</h5>
                                                       <div class="contacts_wrap">
                                                          <div class="contacts_description">
-                                                            <p>The MCA, made up of different Muslim ethnic backgrounds who live in and around Springfield since 1984, who felt that a presence of an Islamic Centre in Springfield is well overdue providing a place of worship and other community and cultural activities; The ultimate goal To Unite & Serve the Muslim & Non-Muslim communities in this area.</p>
+                                                            <p>The MCA, made up of different Muslim ethnic backgrounds who live in and around the town, who felt that a presence of an Islamic Centre in the area is well overdue providing a place of worship and other community and cultural activities; The ultimate goal To Unite & Serve the Muslim & Non-Muslim communities in this area.</p>
                                                          </div>
                                                       </div>
                                                       <!-- /.contacts_wrap -->
@@ -77,7 +77,7 @@
                                              </div>
                                              <div class="sc_layouts_item">
                                                 <div id="sc_layouts_iconed_text_760539490" class="sc_layouts_iconed_text">
-                                                   <span class="sc_layouts_item_icon sc_layouts_iconed_text_icon icon-map-1"></span><span class="sc_layouts_item_details sc_layouts_iconed_text_details"><span class="sc_layouts_item_details_line1 sc_layouts_iconed_text_line1">7 Community Road,</span><span class="sc_layouts_item_details_line2 sc_layouts_iconed_text_line2">Springfield, Lincs. REDACTED.</span></span><!-- /.sc_layouts_iconed_text_details -->
+                                                   <span class="sc_layouts_item_icon sc_layouts_iconed_text_icon icon-map-1"></span><span class="sc_layouts_item_details sc_layouts_iconed_text_details"><span class="sc_layouts_item_details_line1 sc_layouts_iconed_text_line1">1 Community Road,</span><span class="sc_layouts_item_details_line2 sc_layouts_iconed_text_line2">Springfield, AB1 2CD.</span></span><!-- /.sc_layouts_iconed_text_details -->
                                                 </div>
                                                 <!-- /.sc_layouts_iconed_text -->
                                              </div>
@@ -104,7 +104,7 @@
                                  <div  class="vc_wp_text wpb_content_element">
                                     <div class="widget widget_text">
                                        <div class="textwidget">
-                                          <p><span style="font-size: 13px;">© 2022 MUSLIM COMMUNITY ASSOCIATION Registered Charity No: <a href="https://register-of-charities.charitycommission.gov.uk/charity-search/-/charity-details/5037187/charity-overview" target="_blank" rel="noopener">REDACTED</a> ALL RIGHTS RESERVED</span><span style="font-size: 13px; color: #fff;">.</span> <span style="color: #ffb822; font-size: 12px; font-weight: bold;"><span style="font-size: 16px; font-weight: 500;">D</span>ESIGNED B<span style="font-size: 16px; font-weight: 500;">Y</span></span> <a href="http://www.lastlineweb.com/" target="_blank" rel="noopener"><img class="alignnone size-full wp-image-1182" style="margin-top: -7px;" src="{{asset('wp-content/uploads/2017/06/lastlineweb.png')}}" alt="" width="100" height="33" /></a></p>
+                                          <p><span style="font-size: 13px;">© {{ date('Y') }} MUSLIM COMMUNITY ASSOCIATION. ALL RIGHTS RESERVED</span><span style="font-size: 13px; color: #fff;">.</span> <span style="color: #ffb822; font-size: 12px; font-weight: bold;"><span style="font-size: 16px; font-weight: 500;">D</span>ESIGNED B<span style="font-size: 16px; font-weight: 500;">Y</span></span> <a href="http://www.lastlineweb.com/" target="_blank" rel="noopener"><img class="alignnone size-full wp-image-1182" style="margin-top: -7px;" src="{{asset('wp-content/uploads/2017/06/lastlineweb.png')}}" alt="" width="100" height="33" /></a></p>
                                        </div>
                                     </div>
                                  </div>

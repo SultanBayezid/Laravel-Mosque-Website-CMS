@@ -1,4 +1,9 @@
 {
+    "name": "laravel-mosque-website-cms",
+    "version": "1.0.0",
+    "description": "A mosque and Islamic centre website CMS built with Laravel 8.",
+    "license": "MIT",
+    "author": "Sultan Bayezid <sultanbayezidai@gmail.com> (https://lastlineweb.com)",
     "private": true,
     "scripts": {
         "dev": "npm run development",

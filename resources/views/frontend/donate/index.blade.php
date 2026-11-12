@@ -141,7 +141,7 @@
                                                             <div class="wpb_wrapper">
                                                                <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
                                                                   <input type="hidden" name="cmd" value="_s-xclick">
-                                                                  <input type="hidden" name="hosted_button_id" value="REDACTED">
+                                                                  <input type="hidden" name="hosted_button_id" value="YOUR_HOSTED_BUTTON_ID">
                                                                   <input type="image" src="https://www.paypalobjects.com/en_US/GB/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal – The safer, easier way to pay online.">
                                                                   <img alt="" border="0" src="https://www.paypalobjects.com/en_GB/i/scr/pixel.gif" width="1" height="1">
                                                                </form>
@@ -207,9 +207,9 @@
                                                    <tr>
                                                       <td class="bgbaye"><strong class="bgbaye">Bank:</strong></td>
                                                       <td class="bgbaye">
-                                                         HSBC Bank</p>
-                                                         <p>REDACTED</p>
-                                                         <p>REDACTED
+                                                         Your Bank</p>
+                                                         <p>1 Community Road, Springfield,</p>
+                                                         <p>AB1 2CD, United Kingdom.
                                                       </td>
                                                    </tr>
                                                    <tr>
@@ -218,19 +218,19 @@
                                                    </tr>
                                                    <tr>
                                                       <td class="bgbaye"><strong class="bgbaye">A/C No:</strong></td>
-                                                      <td class="bgbaye">REDACTED</td>
+                                                      <td class="bgbaye">00000000</td>
                                                    </tr>
                                                    <tr>
                                                       <td class="bgbaye"><strong class="bgbaye">Sort Code:</strong></td>
-                                                      <td class="bgbaye">REDACTED</td>
+                                                      <td class="bgbaye">00-00-00</td>
                                                    </tr>
                                                    <tr>
                                                       <td class="bgbaye"><strong class="bgbaye">IBAN No:</strong></td>
-                                                      <td class="bgbaye">REDACTED</td>
+                                                      <td class="bgbaye">GB00 XX00 000000 00000000</td>
                                                    </tr>
                                                    <tr>
                                                       <td></td>
-                                                      <td class="bgbaye">(Branch Identifier REDACTED)</td>
+                                                      <td class="bgbaye">(Branch Identifier XXXXXXXXXXXX)</td>
                                                    </tr>
                                                 </tbody>
                                              </table>
@@ -249,7 +249,7 @@
                                        <div class="vc_empty_space"   style="height: 2em"><span class="vc_empty_space_inner"></span></div>
                                        <div class="wpb_text_column wpb_content_element " >
                                           <div class="wpb_wrapper">
-                                             <h6 style="text-align: left;">Registered Charity No: <a href="https://register-of-charities.charitycommission.gov.uk/charity-search/-/charity-details/5037187/charity-overview" target="_blank" rel="noopener">REDACTED</a></h6>
+                                             
                                           </div>
                                        </div>
                                        <div class="vc_empty_space"   style="height: 2em"><span class="vc_empty_space_inner"></span></div>
@@ -263,8 +263,8 @@
                                     <div class="wpb_wrapper">
                                        <div class="vc_message_box vc_message_box-standard vc_message_box-rounded vc_color-info" >
                                           <div class="vc_message_box-icon"><i class="fas fa-info-circle"></i></div>
-                                          <p style="color: #000; font-size: 16px;">If you wish to make a regular monthly donation please download, print and complete the Standing Order form and then hand to your bank.</p>
-                                          <p>Click <a href="{{asset('wp-content/REMOVED')}}" target="_blank" rel="noreferrer noopener"><u class="" style="color: #ffb822; font-size: 18px;">here</u></a> to download the Standing Order form.</p>
+                                          <p style="color: #000; font-size: 16px;">If you wish to make a regular monthly donation, please set up a standing order with your bank using the account details above.</p>
+                                          
                                        </div>
                                     </div>
                                  </div>

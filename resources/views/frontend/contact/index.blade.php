@@ -44,9 +44,9 @@
                                                          <div class="vc_empty_space"   style="height: 1px"><span class="vc_empty_space_inner"></span></div>
                                                          <h6 style="font-size: 24px;text-align: center" class="vc_custom_heading vc_custom_1644110687515" >Al-Noor Islamic Centre</h6>
                                                          <div class="vc_empty_space"   style="height: 2px"><span class="vc_empty_space_inner"></span></div>
-                                                         <p style="font-size: 22px;text-align: center" class="vc_custom_heading vc_custom_1644110762069" >7 Community Road</p>
+                                                         <p style="font-size: 22px;text-align: center" class="vc_custom_heading vc_custom_1644110762069" >1 Community Road</p>
                                                          <div class="vc_empty_space"   style="height: 2px"><span class="vc_empty_space_inner"></span></div>
-                                                         <p style="font-size: 22px;text-align: center" class="vc_custom_heading vc_custom_1644110130375" >Springfield, Lincs. REDACTED.</p>
+                                                         <p style="font-size: 22px;text-align: center" class="vc_custom_heading vc_custom_1644110130375" >Springfield, AB1 2CD.</p>
                                                       </div>
                                                    </div>
                                                 </div>
@@ -62,7 +62,7 @@
                                                    <p role="status" aria-live="polite" aria-atomic="true"></p>
                                                    <ul></ul>
                                                 </div>
-                                                <form action="https://www.example.com/contacts/#wpcf7-f814-p156-o1" method="post" class="wpcf7-form init" novalidate="novalidate" data-status="init">
+                                                <form action="#" method="post" class="wpcf7-form init" novalidate="novalidate" data-status="init">
                                                    <div style="display: none;">
                                                       <input type="hidden" name="_wpcf7" value="814" />
                                                       <input type="hidden" name="_wpcf7_version" value="5.6.4" />
@@ -124,7 +124,7 @@
                                              data-style="dark"
                                              data-cluster-icon=""
                                              ><iframe
-                                             src="https://maps.google.com/maps?t=m&amp;output=embed&amp;iwloc=near&amp;z=16&amp;q=Springfield+Islamic+Centre%2C+1+Community+Road%2C+Springfield+AB1+2CD%2C+United+Kingdom"
+                                             src="https://maps.google.com/maps?t=m&amp;output=embed&amp;iwloc=near&amp;z=14&amp;q=mosque"
                                              scrolling="no"
                                              marginheight="0"
                                              marginwidth="0"

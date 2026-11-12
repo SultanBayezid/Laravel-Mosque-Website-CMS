@@ -443,7 +443,7 @@
                                                 <div class="wpb_wrapper">
                                                    <div  class="wpb_single_image wpb_content_element vc_align_left  vc_custom_1631632757687">
                                                       <figure class="wpb_wrapper vc_figure">
-                                                         <div class="vc_single_image-wrapper   vc_box_border_grey"><img width="512" height="512" src="wp-content/uploads/2021/09/about.png" class="vc_single_image-img attachment-full" alt="" decoding="async" loading="lazy" srcset="https://www.example.com/wp-content/uploads/2021/09/about.png 512w, https://www.example.com/wp-content/uploads/2021/09/about-300x300.png 300w, https://www.example.com/wp-content/uploads/2021/09/about-150x150.png 150w, https://www.example.com/wp-content/uploads/2021/09/about-370x370.png 370w, https://www.example.com/wp-content/uploads/2021/09/about-90x90.png 90w" sizes="(max-width: 512px) 100vw, 512px" /></div>
+                                                         <div class="vc_single_image-wrapper   vc_box_border_grey"><img width="512" height="512" src="wp-content/uploads/2021/09/about.png" class="vc_single_image-img attachment-full" alt="" decoding="async" loading="lazy"  sizes="(max-width: 512px) 100vw, 512px" /></div>
                                                       </figure>
                                                    </div>
                                                 </div>
@@ -521,7 +521,7 @@
                                              data-style="dark"
                                              data-cluster-icon=""
                                              ><iframe
-                                             src="https://maps.google.com/maps?t=m&amp;output=embed&amp;iwloc=near&amp;z=13&amp;q=Springfield+Islamic+Centre%2C+1+Community+Road%2C+Springfield+AB1+2CD%2C+United+Kingdom"
+                                             src="https://maps.google.com/maps?t=m&amp;output=embed&amp;iwloc=near&amp;z=14&amp;q=mosque"
                                              scrolling="no"
                                              marginheight="0"
                                              marginwidth="0"

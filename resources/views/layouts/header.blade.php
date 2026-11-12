@@ -157,7 +157,7 @@
                                                         <div class="vc_column-inner">
                                                             <div class="wpb_wrapper">
                                                                 <div class="sc_layouts_item">
-                                                                    <a href="\" id="sc_layouts_logo_961237546" class="sc_layouts_logo sc_layouts_logo_default"><img class="logo_image" src="{{asset('wp-content/uploads/2017/06/logo_springfield.png')}}" alt="" width="660" height="85" style="max-height:100px;"></a><!-- /.sc_layouts_logo -->
+                                                                    <a href="\" id="sc_layouts_logo_961237546" class="sc_layouts_logo sc_layouts_logo_default"><img class="logo_image" src="{{asset('logo/logo.png')}}" alt="" width="660" height="85" style="max-height:100px;"></a><!-- /.sc_layouts_logo -->
                                                                 </div>
                                                             </div>
                                                         </div>

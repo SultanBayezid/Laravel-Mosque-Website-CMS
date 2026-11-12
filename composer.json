@@ -1,9 +1,26 @@
 {
-    "name": "laravel/laravel",
+    "name": "sultanbayezid/laravel-mosque-website-cms",
     "type": "project",
-    "description": "The Laravel Framework.",
-    "keywords": ["framework", "laravel"],
+    "description": "A mosque and Islamic centre website CMS built with Laravel 8 - prayer times, jamaat times, announcements, news, sliders, donations and a full admin panel.",
+    "keywords": [
+        "laravel",
+        "php",
+        "mosque",
+        "islamic-centre",
+        "cms",
+        "prayer-times",
+        "website",
+        "admin-panel"
+    ],
     "license": "MIT",
+    "authors": [
+        {
+            "name": "Sultan Bayezid",
+            "email": "sultanbayezidai@gmail.com",
+            "homepage": "https://lastlineweb.com",
+            "role": "Developer"
+        }
+    ],
     "require": {
         "php": "^7.3|^8.0",
         "fruitcake/laravel-cors": "^2.0",

@@ -1,7 +1,7 @@
 <div class="menu_mobile_overlay"></div>
             <div class="menu_mobile menu_mobile_fullscreen scheme_dark">
                <div class="menu_mobile_inner">
-                  <a class="menu_mobile_close icon-cancel"></a><a class="sc_layouts_logo" href="../index.html"><img src="../wp-content/uploads/2017/06/logo_springfield.png" alt="logo" width="660" height="85"></a>
+                  <a class="menu_mobile_close icon-cancel"></a><a class="sc_layouts_logo" href="{{ route("frontend-home") }}"><img src="../logo/logo.png" alt="logo" width="660" height="85"></a>
                   <nav class="menu_mobile_nav_area">
                      <ul id="menu_mobile-main-menu-2" class="">
                         <li id="menu_mobile-item-1098" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-1098"><a href="/"><span>Home</span></a></li>

@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Al-Noor Islamic Centre</title>
+    <title>{{ config('app.name', 'Mosque Website CMS') }} - Admin</title>
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="{{asset('wp-content/uploads/2022/02/the-prophets-mosque.png')}}">
     <!-- Bootstrap Core CSS -->
@@ -36,7 +36,7 @@
     <div class="preloader">
         <div class="loader">
             <div class="loader__figure"></div>
-            <p class="loader__label">Al-Noor Islamic Centre</p>
+            <p class="loader__label">{{ config('app.name', 'Mosque Website CMS') }}</p>
         </div>
     </div>
     <!-- ============================================================== -->
